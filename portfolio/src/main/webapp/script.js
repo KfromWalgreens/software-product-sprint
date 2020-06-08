@@ -26,3 +26,30 @@ function addRandomGreeting() {
   const greetingContainer = document.getElementById('greeting-container');
   greetingContainer.innerText = greeting;
 }
+
+function funFact() {
+  const facts =
+      ['Ive been playing the flute since 5th grade', 'I love to solve number puzzles like Sudoku', 'I can bake some SUPERB chocolate chip cookies', 'Sometimes I like to perform in poetry recitation competitions', 'I turned 12 years old on 12/12/2012'];
+
+  const fact = facts[Math.floor(Math.random() * facts.length)];
+
+  const factContainer = document.getElementById('leFacts');
+  factContainer.innerText = fact;
+}
+
+
+
+
+
+function myFunction(imgs) {
+  // Get the expanded image
+  var expandImg = document.getElementById("expandedImg");
+  // Get the image text
+  var imgText = document.getElementById("imgtext");
+  // Use the same src in the expanded image as the image being clicked on from the grid
+  expandImg.src = imgs.src;
+  // Use the value of the alt attribute of the clickable image as text inside the expanded image
+  imgText.innerHTML = imgs.alt;
+  // Show the container element (hidden with CSS)
+  expandImg.parentElement.style.display = "block";
+}

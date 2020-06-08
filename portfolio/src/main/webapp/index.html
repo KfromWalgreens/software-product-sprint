@@ -8,13 +8,57 @@
   </head>
   <body>
     <div id="content">
+    <ul>
+        <li><a href=#about-me>About Me</a></li>
+        <li><a href=#projects>My Projects</a></li>
+        <li><a href=#fun-facts>Fun Zone</a></li>
+    </ul>
       <h1>Kennedy Marsh's Portfolio</h1>
-      <p>This is my portfolio.</p>
-      <p>Click here to get a random message:</p>
-      <button onclick="addRandomGreeting()">Say Hello, Computer</button>
-      <div id="greeting-container"></div>
-      <p>Hi! I'm Kennedy! Welcome to my portfolio. Here are some fun facts about me: <ol>I am currently a rising sophmore attending North Carolina A&T</ol> <ol>I like to solve all sorts of puzzles, play the flute, and eat</ol> <ol>I think coding is cool lol</ol></p>
-      <img src="/images/kennedy.gif" alt="Kennedy's Android">
-    </div>
+      <div id= "about-me">
+        <h2>About Kennedy:</h2>
+        <img src="/images/kennedy.gif" alt="Kennedy's Android" style = "width: 420px; height:420px;">
+          <p> Kennedy Marsh is a rising sophomore who is majoring in computer science at 
+              North Carolina A&T State University. She started her career in 
+              computer science her freshman year of high school, 
+              where she was enrolled in a class focused on teaching students how to 
+              use HTML and CSS to build websites. From then on, she enrolled
+              in more advanced courses like AP Computer Science. Additionally, 
+              she pursued programs outside of the classroom such as Girls Who Code Summer Immersion and 
+              Google Computer Science Summer Institute. </p>
+            
+
+        </div>
+
+      <div id="projects">
+          <h2>Projects:</h2>
+
+<div class="row">
+  <div class="column">
+    <img src="/images/mazebuilder.png" alt="Maze Builder: Creates new mazes based on user-specified maze dimensions (e.g. 25 x 25). First there is an initial board containing a matrix of buttons matching the dimensions of the maze. Then the user can click the buttons to change the color from the wall color to the path color. Once finished, the user can save the maze to a file containing zeros, ones and entry/exit characters. This project was created in Java." onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="/images/basic calculator.png" alt="Basic Calculator: Creates a simple JavaFX calculator. The GUI includes a panel of buttons/filled circles with string labels. When pressed, the button's backgrounds change color indicating the button is currently pressed. When the mouse is released, the background returns to its original color. The string value of the button is added to the TextField at the top of the GUI. Made with Java." onclick="myFunction(this);">
+  </div>
+  <div class="column">
+    <img src="/images/course schedule.png" alt="Course Scheduler: Assists users by allowing them to submit a form of information regarding their classes. The program then reads their file and inputs the information into an arraylist for it to be organized in a more efficient manner. Made with Java." onclick="myFunction(this);">
+  </div>
+</div>
+
+<div class="container">
+  <span onclick="this.parentElement.style.display='none'" class="closebtn">&times;</span>
+
+  <img id="expandedImg" style="width:50%; padding-left: 50%;">
+
+  <div id="imgtext"></div>
+</div>
+      <p>But wait, there's more! For the low low price of $free.99, you can take a peek at my other projects on <a href = "https://github.com/KfromWalgreens">Github</a> and connect with me on <a href ="https://www.linkedin.com/in/kennedy-marsh/">LinkedIn</a></p>
+
+      <div id="fun-facts">
+          <h2>Fun Zone! :D</h2>
+          <button onclick="funFact()">Random Fun Fact About Me :)</button>
+              <div id="leFacts"></div>
+      </div>
+      </div>
+      
   </body>
 </html>
