@@ -53,3 +53,10 @@ function myFunction(imgs) {
   // Show the container element (hidden with CSS)
   expandImg.parentElement.style.display = "block";
 }
+
+
+async function getGreetingAsyncAwait() {
+  const response = await fetch('/data');
+  const data = await response.text();
+  document.getElementById('comments').innerText = data;
+}
