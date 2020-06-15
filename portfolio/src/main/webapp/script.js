@@ -60,3 +60,27 @@ async function getGreetingAsyncAwait() {
   const data = await response.text();
   document.getElementById('comments').innerText = data;
 }
+
+
+function getInfo() {
+  fetch('/data').then(response => response.json()).then((stats) => {
+    // stats is an object, not a string, so we have to
+    // reference its fields to create HTML content
+
+    const statsListElement = document.getElementById('comments');
+    statsListElement.innerHTML = '';
+    statsListElement.appendChild(
+        createListElement('Variable 1: ' + stats.v1));
+    statsListElement.appendChild(
+        createListElement('Variable 2: ' + stats.v2));
+    statsListElement.appendChild(
+        createListElement('Variable 3: ' + stats.v3));
+  });
+}
+
+
+function createListElement(text) {
+  const liElement = document.createElement('li');
+  liElement.innerText = text;
+  return liElement;
+}
